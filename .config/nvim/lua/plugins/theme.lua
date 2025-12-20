@@ -1,0 +1,1 @@
+/home/juanfra/.config/omarchy/current/theme/neovim.lua

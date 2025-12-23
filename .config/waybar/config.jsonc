@@ -10,7 +10,7 @@
   "margin-right": 8,
 
   "modules-left": ["custom/omarchy","hyprland/workspaces","mpris"],
-  "modules-center": ["custom/idle","hyprland/window", "custom/todo","custom/update", "custom/screenrecording-indicator"],
+  "modules-center": ["custom/idle","hyprland/window", "custom/screenrecording-indicator"],
   "modules-right": [  
     "custom/cava",
     "group/tray-expander",
@@ -48,31 +48,15 @@
     }
   },
   "custom/omarchy": {
-    "format": "󰣇",
+    "format": "<span font='omarchy'>\ue900</span>",
     "on-click": "omarchy-menu",
     "on-click-right": "omarchy-launch-terminal",
     "tooltip-format": "Arch Menu\n\nSuper + Alt + Space"
-  },
-  "custom/update": {
-    "format": "",
-    "exec": "omarchy-update-available",
-    "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
-    "tooltip-format": "Omarchy update available",
-    "signal": 7,
-    "interval": 3600
   },
 
   "custom/cava": {
     "format": "{}",
     "exec": "~/.config/waybar/scripts/cava.sh"
-},
-
-  "custom/todo": {  
-  "exec": "~/.config/waybar/scripts/todo.sh",  
-  "return-type": "json",  
-  "format": " {}",  
-  "on-click": "alacritty -e calcurse",  
-  "interval": 5
 },
 
    "cpu": {
@@ -89,7 +73,7 @@
     "format-alt": "{:%A %m/%d/%Y}",
     "tooltip-format": "<span>{calendar}</span>",
     "calendar": {
-      "mode": "mouth",
+      "mode": "month",
       "mode-mon-col": 3,
       "on-click-right": "mode",
       "format": {
@@ -207,7 +191,7 @@
     "format": "{}°",
     "tooltip": true,
     "interval": 600,
-    "exec": "wttrbar --location Dar-es-Salaam",
+    "exec": "wttrbar --location Temuco,Chile",
     "return-type": "json"
   },
 
@@ -224,31 +208,18 @@
     "max-length": 50
   },
 
- 
   "hyprland/window": {
-    "format": "󰜃  Palccod ~ {title}",
+    "format": "{title}",
     // "icon": true,
     "max-length": 25,
     "icon-size": 15
-    // "rewrite": {
-    //   " - ": "", // if no window is focused, a single dash is displayed, this removes it
-    //   "(.*) - Chromium - chromium": "  $1",
-    //   "(.*) - Discord - discord": "   $1",
-    //   "(.*) - Obsidian - .* - obsidian": "  $1",
-    //   "(.*) - com.mitchellh.ghostty": "  $1",
-    //   "(.*) - Alacritty": "  $1",
-    //   "(.*) - BeeperTexts": "󰻞  $1",
-    //   "(.*) - org.gnome.Nautilus": "  $1"
-    //   // "OBS *. - (.*) - com.obsproject.Studio": "  $1", // not yet functional
-    //   // "nvim (.*) - com.mitchellh.ghostty": "  $1", // not being captured
-    // }
   },
-
   "custom/idle": {
     "format": "",
     "tooltip": false,
     "on-click": "omarchy-toggle-idle"
   },
+
   "custom/power": {
     "format": " ",
     "on-click": "omarchy-menu system",
@@ -256,4 +227,3 @@
   }
 }
 
-  

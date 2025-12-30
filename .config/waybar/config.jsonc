@@ -12,7 +12,6 @@
   "modules-left": ["custom/omarchy","hyprland/workspaces","mpris"],
   "modules-center": ["custom/idle","hyprland/window", "custom/screenrecording-indicator"],
   "modules-right": [  
-    "custom/cava",
     "group/tray-expander",
     "custom/weather",
     "network#icon",
@@ -54,11 +53,7 @@
     "tooltip-format": "Arch Menu\n\nSuper + Alt + Space"
   },
 
-  "custom/cava": {
-    "format": "{}",
-    "exec": "~/.config/waybar/scripts/cava.sh"
-},
-
+  
    "cpu": {
     "interval": 2,
     "format": "󰍛 {usage}%",

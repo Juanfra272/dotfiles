@@ -205,7 +205,7 @@
 
   "hyprland/window": {
     "format": "{title}",
-    // "icon": true,
+    "icon": true,
     "max-length": 25,
     "icon-size": 15
   },

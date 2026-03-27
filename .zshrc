@@ -30,7 +30,7 @@ function parse_git_branch {
 	fi
 }
 
-PROMPT='%F{cyan}󰣇 %f %F{magenta}%n%f $(dir_icon) %F{red}%~%f%${vcs_info_msg_0_} %F{yellow}$(parse_git_branch)%f %(?.%B%F{green}.%F{red})%f%b '
+PROMPT='%F{cyan}󰣇%f %F{magenta}%n%f $(dir_icon) %F{red}%~%f%${vcs_info_msg_0_} %F{yellow}$(parse_git_branch)%f %(?.%B%F{green}.%F{red})%f%b '
 alias l="eza -lh --icons=auto"
 alias ls="eza -ha --icons=auto --sort=name --group-directories-first"
 export PATH="$HOME/.local/bin:$PATH"
